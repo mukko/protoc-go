@@ -42,5 +42,4 @@ RUN apt-get purge -y \
     g++ &&\
     apt-get clean -y
 
-VOLUME ["/go", "/proto"]
-ENTRYPOINT ["protoc"]
+ENTRYPOINT [ "protoc" ]
