@@ -42,4 +42,5 @@ RUN apt-get purge -y \
     g++ &&\
     apt-get clean -y
 
+WORKDIR /defs
 ENTRYPOINT [ "protoc" ]
