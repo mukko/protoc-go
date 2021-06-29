@@ -42,5 +42,8 @@ RUN apt-get purge -y \
     g++ &&\
     apt-get clean -y
 
+ADD entrypoint.sh /usr/local/bin
+RUN chmod +x /usr/local/bin/entrypoint.sh
+
 WORKDIR /defs
-ENTRYPOINT [ "protoc" ]
+ENTRYPOINT [ "entrypoint.sh" ]
